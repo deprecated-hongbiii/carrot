@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background-color: black;
+  text-align: center;
+}
+
+.background {
+  width: 80vw;
+  border-radius: 15px;
+  margin: 10% 0;
+}
