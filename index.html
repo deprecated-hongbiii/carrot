@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🥕 당근뽑기게임</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <script src="src/main.js" defer></script>
+    <script src="src/random.js" defer></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -14,11 +15,16 @@
     />
   </head>
   <body>
-    <img src="img/background.png" class="background" alt="background" />
-    <button class="start">
-      <i class="fas fa-play"></i>
-    </button>
-    <section class="timer">00:00</section>
-    <div class="leftover">10</div>
+    <div class="game">
+      <img src="img/background.png" class="background" alt="background" />
+      <section class="container">
+        <button class="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <section class="timer">00:00</section>
+        <div class="leftover">10</div>
+      </section>
+      <section class="items"></section>
+    </div>
   </body>
 </html>

@@ -1,11 +1,64 @@
 body {
   margin: 0;
   background-color: black;
-  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
 }
 
 .background {
-  width: 80vw;
+  width: 800px;
+  height: 500px;
   border-radius: 15px;
-  margin: 10% 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+}
+
+.play {
+  font-size: 28px;
+  padding: 10px 15px;
+  background-color: blanchedalmond;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+.timer {
+  font-size: 28px;
+  padding: 5px 15px;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+.leftover {
+  font-size: 40px;
+  background-color: rgb(255, 156, 189);
+  border: 4px solid black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: white;
+}
+
+.items {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
