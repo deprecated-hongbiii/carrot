@@ -23,7 +23,9 @@ const randomCoordinates = (min, max) => {
 };
 
 const items = document.querySelector('.items');
-items.innerHTML = `
+
+const onPlay = () => {
+  items.innerHTML = `
     <img src="../img/carrot.png" class="item"/>
     <img src="../img/carrot.png" class="item"/>
     <img src="../img/carrot.png" class="item"/>
@@ -42,13 +44,14 @@ items.innerHTML = `
     <img src="../img/bug.png" class="item"/>
   `;
 
-const item = document.querySelectorAll('.item');
+  const item = document.querySelectorAll('.item');
 
-for (let i = 0; i < item.length; i++) {
-  item[i].style.transform = `translate(${randomCoordinates(
-    minX,
-    maxX
-  )}px, ${randomCoordinates(minY, maxY)}px)`;
-}
-
+  for (let i = 0; i < item.length; i++) {
+    item[i].style.transform = `translate(${randomCoordinates(
+      minX,
+      maxX
+    )}px, ${randomCoordinates(minY, maxY)}px)`;
+  }
+};
 const play = document.querySelector('.play');
+play.addEventListener('click', onPlay);
