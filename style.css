@@ -26,6 +26,7 @@ body {
 }
 
 .play {
+  cursor: pointer;
   font-size: 28px;
   padding: 10px 15px;
   background-color: blanchedalmond;
@@ -53,8 +54,9 @@ body {
 
 .items {
   position: absolute;
+  transform: translate(0px, 250px);
   width: 800px;
-  height: 500px;
+  height: 250px;
 }
 
 .item {
