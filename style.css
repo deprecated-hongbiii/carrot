@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'CookieRunOTF-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background-color: black;
+  font-family: 'CookieRunOTF-Bold';
 }
 
 .game {
@@ -32,20 +41,27 @@ button:focus {
   outline: none;
 }
 
-.play {
+.play,
+.stop {
   font-size: 28px;
   padding: 10px 15px;
   background-color: blanchedalmond;
   border: 4px solid black;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .timer {
-  font-size: 28px;
+  font-size: 32px;
+  width: 100px;
   padding: 5px 15px;
   background-color: white;
   border: 4px solid black;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
 .leftover {
@@ -56,6 +72,9 @@ button:focus {
   width: 60px;
   height: 60px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .items {
@@ -69,4 +88,7 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
+}
+.item:hover {
+  cursor: pointer;
 }
