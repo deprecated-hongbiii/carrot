@@ -42,4 +42,27 @@ function timer() {
   stop.addEventListener('click', () => {clearTimeout(time)});
 
   // 4. 시간 안에 당근을 모두 없앴을 때
+  items.addEventListener('click', (e) => {
+  if(e.target.className === 'item carrot') {
+    e.target.remove();
+    const leftover = document.querySelectorAll('.carrot').length;
+    leftoverBox.textContent = `${leftover}`;
+    if(leftover === 0) {
+      // 게임 승리
+      clearTimeout(time);
+      displayFlex(popUp);
+      displayNone(stop);
+      displayFlex(box);
+      popUpMessage.textContent = `You win 🎉`;
+    }
+  }
+
+  if(e.target.className === 'item bug') {
+    // 게임 오버
+    displayFlex(popUp);
+    displayNone(stop);
+    displayFlex(box);
+    popUpMessage.textContent = `You Lose 🤪`;
+  }
+})
 }
