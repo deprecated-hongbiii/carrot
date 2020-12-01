@@ -60,6 +60,7 @@ play.addEventListener('click', onPlay);
 play.addEventListener('click', () => {
   displayNone(play);
   displayFlex(stop);
+  resetCount();
 })
 replay.addEventListener('click', onPlay);
 replay.addEventListener('click', () => {
@@ -69,4 +70,5 @@ replay.addEventListener('click', () => {
   seconds = 9;
   resetTimer();
   timer();
+  resetCount();
 })
