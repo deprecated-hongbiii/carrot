@@ -16,5 +16,9 @@ function timer() {
 
   if(seconds === -1) {
     clearTimeout(time);
+    displayNone(stop);
+    displayFlex(box);
+    displayFlex(popUp);
+    popUpMessage.textContent = `TIME OVER ⏰`;
   }
 }
