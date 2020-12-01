@@ -8,6 +8,14 @@ items.addEventListener('click', (e) => {
     console.log('당근이 클릭됨');
     displayNone(e.target);
   }
+
+  if(e.target.className === 'item bug') {
+    // 게임 오버
+    displayFlex(popUp);
+    displayNone(stop);
+    displayFlex(box);
+    popUpMessage.textContent = `You Lose 🤪`;
+  }
 })
 
 function countCarrot() {
