@@ -1,5 +1,6 @@
 const stop = document.querySelector('.stop');
 const popUp = document.querySelector('.pop-up');
+const box = document.querySelector('.box');
 
 play.addEventListener('click', () => {
   displayNone(play);
@@ -9,6 +10,8 @@ play.addEventListener('click', () => {
 stop.addEventListener('click', () => {
   // clearTimeout();
   displayFlex(popUp);
+  displayNone(stop);
+  displayFlex(box);
 })
 
 function displayNone(element) {
