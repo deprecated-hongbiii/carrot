@@ -26,22 +26,22 @@ const items = document.querySelector('.items');
 
 const onPlay = () => {
   items.innerHTML = `
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/carrot.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
-    <img src="../img/bug.png" class="item"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/carrot.png" class="item carrot"/>
+    <img src="../img/bug.png" class="item bug"/>
+    <img src="../img/bug.png" class="item bug"/>
+    <img src="../img/bug.png" class="item bug"/>
+    <img src="../img/bug.png" class="item bug"/>
+    <img src="../img/bug.png" class="item bug"/>
+    <img src="../img/bug.png" class="item bug"/>
   `;
 
   const item = document.querySelectorAll('.item');
@@ -66,4 +66,7 @@ replay.addEventListener('click', () => {
   displayNone(popUp);
   displayNone(box);
   displayFlex(stop);
+  seconds = 9;
+  resetTimer();
+  timer();
 })
