@@ -1,5 +1,4 @@
 const leftoverBox = document.querySelector('.leftover');
-let numOfCarrots = document.querySelectorAll('.carrot');
 // leftoverBox.textContent = leftover;
 
 items.addEventListener('click', (e) => {
@@ -18,8 +17,7 @@ items.addEventListener('click', (e) => {
   }
 })
 
-// function resetCount() {
-//   play.addEventListener('click', () => {
-//     leftoverBox.textContent = `${numOfCarrots}`
-//   })
-// }
+function resetCount() {
+  const numOfCarrots = document.querySelectorAll('.carrot').length;
+  leftoverBox.textContent = `${numOfCarrots}`
+}
