@@ -54,4 +54,16 @@ const onPlay = () => {
   }
 };
 const play = document.querySelector('.play');
+const replay = document.querySelector('.replay');
+
 play.addEventListener('click', onPlay);
+play.addEventListener('click', () => {
+  displayNone(play);
+  displayFlex(stop);
+})
+replay.addEventListener('click', onPlay);
+replay.addEventListener('click', () => {
+  displayNone(popUp);
+  displayNone(box);
+  displayFlex(stop);
+})
