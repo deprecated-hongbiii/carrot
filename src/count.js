@@ -1,12 +1,12 @@
 const leftoverBox = document.querySelector('.leftover');
-const leftover = document.querySelectorAll('.carrot').length;
-
+let numOfCarrots = document.querySelectorAll('.carrot');
 // leftoverBox.textContent = leftover;
 
 items.addEventListener('click', (e) => {
   if(e.target.className === 'item carrot') {
-    console.log('당근이 클릭됨');
-    displayNone(e.target);
+    e.target.remove();
+    const leftover = document.querySelectorAll('.carrot').length;
+    leftoverBox.textContent = `${leftover}`;
   }
 
   if(e.target.className === 'item bug') {
@@ -18,6 +18,8 @@ items.addEventListener('click', (e) => {
   }
 })
 
-function countCarrot() {
-
-}
+// function resetCount() {
+//   play.addEventListener('click', () => {
+//     leftoverBox.textContent = `${numOfCarrots}`
+//   })
+// }
