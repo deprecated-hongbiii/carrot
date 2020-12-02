@@ -31,24 +31,17 @@ function timer() {
     popUpMessage.textContent = `TIME OVER ⏰`;
   }
 
-  // 2. 벌레 클릭 시
-  items.addEventListener('click', (e) => {
-    if(e.target.className === 'item bug') {
-      clearTimeout(time);
-    }
-  })
-
-  // 3. 정지 버튼 클릭 시
+  // 2. 정지 버튼 클릭 시
   stop.addEventListener('click', () => {clearTimeout(time)});
 
-  // 4. 시간 안에 당근을 모두 없앴을 때
+  // 3. 게임 플레이 중에서
   items.addEventListener('click', (e) => {
   if(e.target.className === 'item carrot') {
     e.target.remove();
     const leftover = document.querySelectorAll('.carrot').length;
     leftoverBox.textContent = `${leftover}`;
     if(leftover === 0) {
-      // 게임 승리
+      // 3-1. 당근을 모두 없앴을 때
       clearTimeout(time);
       displayFlex(popUp);
       displayNone(stop);
@@ -58,7 +51,7 @@ function timer() {
   }
 
   if(e.target.className === 'item bug') {
-    // 게임 오버
+    // 3-2. 벌레를 눌렀을 때
     displayFlex(popUp);
     displayNone(stop);
     displayFlex(box);
