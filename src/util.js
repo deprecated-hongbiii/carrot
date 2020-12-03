@@ -2,7 +2,7 @@ function $(selector) {
   return document.querySelector(selector)
 }
 
-const minAndMaxOfCoordinates = {
+const _ = {
   minX: 0,
   maxX: 700,
   minY: 0,
@@ -29,4 +29,4 @@ function removeClassList(element, className) {
   element.classList.remove(className);
 }
 
-export { $, minAndMaxOfCoordinates, randomCoordinates, displayNone, displayFlex, addClassList, removeClassList };
+export { $, _, randomCoordinates, displayNone, displayFlex, addClassList, removeClassList };
