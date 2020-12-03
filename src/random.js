@@ -1,3 +1,5 @@
+import { displayNone, displayFlex, addClassList, removeClassList } from './util.js';
+
 const background = document.querySelector('.background');
 // const rect = background.getBoundingClientRect();
 
@@ -12,15 +14,6 @@ console.log((rect.bottom - rect.y) / 2); */
 const maxX = rect.right;
 const minY = (rect.bottom - rect.y) / 2 + rect.y;
 const maxY = rect.bottom; */
-
-const minX = 0;
-const maxX = 700;
-const minY = 0;
-const maxY = 150;
-
-const randomCoordinates = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
 
 const items = document.querySelector('.items');
 
