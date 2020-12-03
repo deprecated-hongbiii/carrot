@@ -36,26 +36,26 @@ function timer() {
 
   // 3. 게임 플레이 중에서
   items.addEventListener('click', (e) => {
-  if(e.target.className === 'item carrot') {
-    e.target.remove();
-    const leftover = document.querySelectorAll('.carrot').length;
-    leftoverBox.textContent = `${leftover}`;
-    if(leftover === 0) {
-      // 3-1. 당근을 모두 없앴을 때
-      clearTimeout(time);
+    if(e.target.className === 'item carrot') {
+      e.target.remove();
+      const leftover = document.querySelectorAll('.carrot').length;
+      leftoverBox.textContent = `${leftover}`;
+      if(leftover === 0) {
+        // 3-1. 당근을 모두 없앴을 때
+        clearTimeout(time);
+        displayFlex(popUp);
+        displayNone(stop);
+        displayFlex(box);
+        popUpMessage.textContent = `You win 🎉`;
+      }
+    }
+
+    if(e.target.className === 'item bug') {
+      // 3-2. 벌레를 눌렀을 때
       displayFlex(popUp);
       displayNone(stop);
       displayFlex(box);
-      popUpMessage.textContent = `You win 🎉`;
+      popUpMessage.textContent = `You Lose 🤪`;
     }
-  }
-
-  if(e.target.className === 'item bug') {
-    // 3-2. 벌레를 눌렀을 때
-    displayFlex(popUp);
-    displayNone(stop);
-    displayFlex(box);
-    popUpMessage.textContent = `You Lose 🤪`;
-  }
-})
+  })
 }
