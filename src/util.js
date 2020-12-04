@@ -2,6 +2,19 @@ function $(selector) {
   return document.querySelector(selector)
 }
 
+// dom 다 찾아놓기
+const $_ = {
+  play: $('.play'),
+  replay: $('.replay'),
+  stop: $('.stop'),
+  items: $('.items'),
+  popUp: $('.pop-up'),
+  popUpMessage: $('.pop-up-message'),
+  box: $('.box'),
+  timerBox: $('.timer'),
+  leftoverBox: $('.leftover')
+};
+
 const _ = {
   minX: 0,
   maxX: 700,
@@ -29,4 +42,4 @@ function removeClassList(element, className) {
   element.classList.remove(className);
 }
 
-export { $, _, randomCoordinates, displayNone, displayFlex, addClassList, removeClassList };
+export { $, $_, _, randomCoordinates, displayNone, displayFlex, addClassList, removeClassList };
